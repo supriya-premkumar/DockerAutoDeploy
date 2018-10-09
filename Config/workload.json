@@ -1,0 +1,12 @@
+{ "SpinUp": {"nginx" : "docker run -d --name docker-nginx -p 80:80 -v -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx",
+	     "redis"     : "docker run -d redis",
+	     "node.js"   : "docker run -d node",
+	     "django"    : "docker run -d django",
+	     "cassandra" : "docker run -d cassandra"},
+  "Stats":  {"DockerProcess": "docker ps",
+	     "CPUUtil"      : "top -b -n 1",
+	     "MainMem"      : "vmstat -s",
+	     "SecMem"       : "df -h",
+	     "DockerStats"  : "docker stats --no-stream"},
+  "Logs":   {"Logs": "docker logs <containerID>"},
+}
